@@ -1,14 +1,12 @@
 <h1 class="text-blue">Ember League Table</h1>
 
 <div class="flex">
-  <div class="flex-1 bg-red h-screen">
-      left
+  <div class="flex-1 h-screen p2">
       <GameResults @games ={{this.gameSimulator.games}} />
   </div>
 
-  <div class="flex-1 bg-blue h-screen">
-      right
-      <LeagueTable @games ={{this.gameSimulator.games}}/>
+  <div class="flex-1 h-screen p2">
+      <LeagueTable @games ={{this.gameSimulator.games}} @teams={{this.gameSimulator.teams}} />
   </div>
   
 </div>

@@ -9,6 +9,10 @@ const DELAY_BETWEEN_GAMES = 100
 export default Service.extend({
 store: inject(),
 
+teams: computed(function(){
+  return this.store.peekAll('team')
+}),
+
 games: computed(function(){
   return this.store.peekAll('game')
 }),
