@@ -4,7 +4,7 @@ import { later } from '@ember/runloop'
 import { shuffle } from 'ember-composable-helpers/helpers/shuffle'
 import { computed } from '@ember/object'
 
-const DELAY_BETWEEN_GAMES = 100
+const DELAY_BETWEEN_GAMES = 1000
 
 export default Service.extend({
 store: inject(),
@@ -28,7 +28,7 @@ games: computed(function(){
   },
 
   seedTeams(){
-    let teamNames= ['Manchester', 'Team 2', 'Team 3', 'Team 4']
+    let teamNames= ['Madrid', 'Barcelona', 'Atletico M', 'Atletico B', 'Valencia', 'Deportivo', 'Sevilla', 'Elche']
 
     for(let i = 0; i < teamNames.length; i++){
       this.store.createRecord('team', { id: i, name: teamNames[i]})

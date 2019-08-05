@@ -8,6 +8,7 @@ export default DS.Model.extend({
   homeGoals: DS.attr('number'),
   awayGoals: DS.attr('number'),
   playedOn: DS.attr('date'),
+  
   isDrawn: computed('homeGoals', 'awayGoals', function(){
     return this.homeGoals === this.awayGoals
   }),
